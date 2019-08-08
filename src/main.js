@@ -4,12 +4,13 @@ import 'babel-polyfill'
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 import fastclick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import VueLazyLoad from 'vue-lazyload'
 import 'swiper/dist/css/swiper.css'
 
-import 'common/stylus/index.styl'
+import 'stylus/index.styl'
 
 Vue.config.productionTip = false
 fastclick.attach(document.body)
@@ -21,6 +22,7 @@ Vue.use(VueLazyLoad, {
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
   render: h => h(App)
 })

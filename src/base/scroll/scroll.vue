@@ -55,7 +55,6 @@ export default {
       if (this.listenScroll) {
         let me = this
         this.scroll.on('scroll', (pos) => {
-          console.log(pos)
           me.$emit('scroll', pos)
         })
       }
